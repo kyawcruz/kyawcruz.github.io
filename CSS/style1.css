@@ -1,0 +1,27 @@
+/* Universal Selector */
+*{
+    /* color: red; */
+}
+
+/* tag or element selector */
+h1{
+    text-align: center;
+    color: green;
+}
+/* attribute selector */
+a[title="google"]{
+    letter-spacing: 20px;   
+}
+
+/* id selector */
+#idselector{
+    color: blueviolet;
+    text-indent: 40px;
+}
+
+/* class selector */
+.classselector{
+    color: brown;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}

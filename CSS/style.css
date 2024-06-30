@@ -1,0 +1,22 @@
+h1{
+    color: red;
+    text-align: center;
+}
+p{
+    color: rgb(93, 0, 255);
+    word-spacing: 10px;
+    text-indent: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    width: 100%;
+    background-color: green;
+}
+
+/* color 
+    rgb
+    color: #00ff00; (green)
+    0 -> 9a -> f
+
+
+
+*/
