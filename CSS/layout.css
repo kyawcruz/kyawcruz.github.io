@@ -1,0 +1,10 @@
+.inline {
+    border: 2px solid red;
+    width: 400px;
+    display: inline-block;
+}
+.block {
+    border: 2px solid green;
+    width: 400px;
+    display: inline-block;
+}

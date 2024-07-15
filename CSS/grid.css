@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+    color: red;
+}
+.gridone div, .gridtwo div, .gridthree div, .gridfour div, .gridsix div, .gridseven div {
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+.gridone, .gridtwo, .gridthree, .gridfour, .gridfive, .gridsix, .gridseven {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.gridtwo {
+    grid-column-gap: 20px;
+}
+.gridthree {
+    display: grid;
+    grid-row-gap: 30px;
+}
+.gridfour {
+    /* display: grid; */
+    grid-gap: 40px;
+}
+.gridfive {
+    grid-row-gap: 50px;
+    grid-column-gap: 100px;
+}
+.columnadd {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.rowadd {
+    grid-row-start: 1;
+    grid-row-end: 3;    
+}
+.rowadd2 {
+    grid-row-start: 1;
+    grid-row-end: 5;
+}

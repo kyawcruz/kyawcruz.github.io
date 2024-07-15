@@ -1,0 +1,8 @@
+/* Pseudo Selector */
+/* Target Selector */
+:target {
+    color: brown;
+    border: 2px dashed;
+    letter-spacing: 20px;
+    line-height: 30px;
+}

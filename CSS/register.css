@@ -1,0 +1,59 @@
+#title {
+    text-align: center;
+    color: red;
+}
+body {
+    background-color: aliceblue;
+}
+form {
+    width: 40%;
+    margin: auto;
+}
+input[type="text"],input[type="email"],input[type="number"],input[type="date"] {
+    width: 100%;
+    height: 40px;
+    outline: none;
+}
+input[type="text"]:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="date"]:focus {
+    border: 3px solid gray;
+    border-radius: 7px;
+}
+input[type="radio"]:checked+label {
+    color: red;
+    letter-spacing: 10px;
+}
+input[type="checkbox"]:enabled+label {
+    color: green;
+    font-style: italic;
+}
+input[type="checkbox"]:checked+label {
+    color: red;
+    font-style: normal;
+}
+input[type="checkbox"]:disabled+label {
+    color: gray;
+}
+ul li:first-child {
+    background-color: yellow;
+}
+ul li:last-child {
+    background-color: green;
+}
+ul li:nth-child(4) {
+    background-color: red;
+}
+p:empty,div:empty {
+    background-color: rgb(80, 82, 235);
+    height: 20px;
+}
+#register_btn {
+    height: 35px;
+    width: 100px;
+    float: right;
+    display: block;
+}
+#register_btn:hover {
+    background-color: skyblue;
+    color: white;
+    border: 1px solid skyblue;
+}

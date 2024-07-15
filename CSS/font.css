@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+    color: blue;
+}
+.online {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;   
+}
+@font-face {
+    font-family: "barlow";
+    src: url(Barlow_Condensed/BarlowCondensed-Medium.ttf);
+}
+.offline {
+    font-family: "barlow";
+}
