@@ -68,45 +68,131 @@
 .shop_now:hover {
     cursor: pointer;
 }
+/* end banner */
+
 /* Shipping and service */
-.table {
-    border: 1px solid green;
-    padding-left: 10px;
-    padding-right: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 40px;
-    margin-top: 10px;
-    margin-right: 10px;
-    float: left;
-}
-#truck_icon {
-    width: 100px;
-    height: 50px;
-}
-.table1 {
-    border: 1px solid green;   
-    padding-left: 10px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
-    display: inline-block;
-    float: left;    
-}
-#phone_icon {
-    width: 80px;
-    height: 40px;
-}
-#shield_icon {
-    width: 80px;
-    height:40px;
-}
-#gift_icon {
-    width: 80px;
-    height: 40px;
-}
 .service {
-    margin: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 12px;
+}
+.service_text {
+    display: inline-block;
+    margin-left: 15px;
+}
+.service_title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.service_border {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding-top: 7px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+/* end service */
+
+/* start promotion */
+.promotion_title {
+    margin-left: 45px;
+    margin-top: 25px;
+}
+.divided {
+    width: 70px;
+    border: 1.5px solid red;
+
+}
+.promo_img {
+    width: 100%;
+    display: block;
+}
+.promo {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 5px 50px;
+    grid-column-gap: 20px;
+}
+.promo_shirt {
+    display: grid;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+.promo_item {
+    text-align: center;
+}
+.promo_price {
+    position: absolute;
+}
+.dis_price {
+    color: white;
+    position: relative;
+    left: 175px;
+    display: block;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.normal_price {
+    color: red;
+    position: relative;
+    left: 175px;
+    text-decoration: line-through;
+}
+/* end promotion */
+
+/* start new arrival */
+.arrival_title {
+    margin-left: 45px;
+    margin-top: 25px;
+}
+.arrival_grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.new_arrival_item {
+    border: 1px solid gray;
+    margin-top: 6px;
+    position: relative;
+}
+.arrival_img {
+    width: 100%;
+}
+.whist_list {
+    float: right;
+    margin-right: 10px;
+}
+.arrival_item_text {
+    display: inline-block;
+    margin-left: 10px;
+}
+.arrival_cart_icon {
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    opacity: 0;
+}
+.arrival_cart_icon a {
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    border-radius: 2px;
+    padding: 5px;
+}
+.arrival_cart_icon:hover {
+    opacity: 2;
+}
+.new_arrival_item:hover {
+    opacity: 0.6;
 }
