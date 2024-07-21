@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatype</title>
+</head>
+<body>
+    <h1>Data Types</h1>
+    
+    <script>
+        // String Data Type
+        // var name = "Kyaw Cruz";
+        // var name = 'Kyaw Cruz';
+        var name = `Kyaw Cruz`;
+        console.log(name);
+        console.log(typeof(name));
+
+        // Numeric Data Type
+        var num = 23;
+        console.log(num);
+        console.log(typeof(num));
+
+        // Bollean Data Type 
+        var single = true;
+        console.log(single); 
+        console.log(typeof(single));
+
+        // Null or Object Data Type
+        var son = null;
+        console.log(son);
+        console.log(typeof(son));
+
+        // undefinied
+        var mybaby;
+        console.log(mybaby);
+        console.log(typeof(mybaby));
+
+        // Array Data Type 
+        var array1 = new Array(1,2,3,4,"a","b","c");
+        console.log(array1);
+        console.log(typeof(array1));
+        console.log(array1[4]);
+
+        var multiArray = ["mg mg", "ma ma", "Hla Hla", ['Aung Aung', 'Tun Tun'], "Mya Mya"];
+        console.log(multiArray)
+        console.log(multiArray[3][0]);
+
+        // Object
+        var student = {
+            // key : value
+            name : "Kyaw Cruz",
+            age : 28,
+            address : "Mandalay",
+            color : ['red', "green", 'blue']
+        }
+        console.log(student);
+        console.log(student.name);
+        console.log(student.color[1]);
+        console.log(student.color[2]);
+        console.log(student.color[0]);
+        console.log(student.age);
+        console.log(student.address);
+
+    </script>
+</body>
+</html>
