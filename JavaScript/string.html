@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String Lesson</h1>
+    <script>
+        let firstName = 'Developer';
+        let lastName = 'Kyaw Cruz';
+
+        // let fullName = firstName + lastName;
+        let fullName = firstName.concat(' Update ', lastName);
+        console.log(fullName);
+
+        console.log("My name is " + lastName);
+        console.log("My name is <h1>" + lastName + "</h1>");
+        
+        console.log(`My name is <h1> ${lastName} </h1>`);
+
+        console.log(lastName.toUpperCase());
+        console.log(lastName.toLowerCase());
+        console.log(fullName);
+        console.log(fullName.substr(10,3));
+
+        let myJob = "        php    web     Developer   ";
+        console.log(myJob.trim());
+
+        let ser = "Hello Bootcamper!";
+        console.log(ser.search('a'));
+
+        let rep = "Javascript is Funny";
+        console.log(rep.replace('Javascript','Jquery'));
+
+        console.log('I\'m Kyaw Cruiz');
+        console.log("I\'m Kyaw Cruiz, 5'5\"");
+        console.log(`I'm Kyaw Cruiz, 5'5"`);
+    </script>
+</body>
+</html>
