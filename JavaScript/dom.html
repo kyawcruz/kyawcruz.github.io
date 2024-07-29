@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myId">Dom <i>Selector</i></h1>
+    <p>Class Selector</p>
+    <div class="myClass">Class Selector One</div>
+    <p class="myClass">Class Selector Two</p>
+
+    <button onclick="show()">Click Me</button>
+    <button onclick="update()">Update Me</button>
+    <script>
+        function show() {
+            // code 
+            // id selector
+            let myId = document.getElementById('myId');
+            console.log(myId.innerHTML);
+
+            // class selector
+            let myClass = document.getElementsByClassName('myClass');
+            console.log(myClass);
+            console.log(myClass[0].innerHTML);
+
+            // tag selector
+            // let myTag = document.getElementsByTagName('myTag');
+            let myTag = document.getElementsByTagName('p');
+            console.log(myTag[0].innerText);
+
+            // query selector all
+            let querySelectorAll = document.querySelectorAll('div');
+            console.log(querySelectorAll[0].innerHTML);
+
+            // query selector
+            let querySelector = document.querySelector('#myId');
+            console.log(querySelector);
+
+        }
+        function update() {
+            // code 
+            let myId = document.getElementById('myId');
+            myId.innerText = "Javascript is <i>Funny!</i>";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+/* start nav */
+.nav_item {
+    background-color: rgb(64, 64, 171);
+}
+.nav_logo {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.nav_item li {
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 22px;
+}
+.nav_item ul li a {
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+}
+.nav_search {
+    outline: none;
+    border: 1px solid white;
+    height: 20px;
+    border-radius: 3px;
+}
+/* end nav */
+/* Start Thery're here */
+
+.theyarehere {
+    margin-top: 20px;
+    margin-left: 22px;
+    
+    border: 1px solid gray;
+}
+.theyarehere img {
+    position: relative;
+    
+}
+.theyarehere p {
+    position: absolute;
+    margin-left: 15px;
+    top: 618px;
+    background-color: rgb(185, 185, 212);
+    padding: 5px;
+    font-size: 25px;
+    color: white;
+}
+.harrisfailed {
+    display: inline-block;
+    text-decoration: none;
+    padding: 16px;
+    font-size: 30px;
+}
+.theyare {
+    display: grid;
+    grid-template-columns: 74.6% auto;
+}
+.latest_videos {
+    float: right;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-right: 15px;
+    
+}
+.latest_videos h4 {
+    color: rgb(62, 62, 119);
+}
+.latest_videos1 {
+    width: 100%;
+    height: 210px;
+    /* margin-top: 20px; */
+    margin-bottom: 3px;
+}
+.latest_videos2 {
+    width: 100%;
+    height: 210px;
+    /* margin-top: 40px; */
+    margin-bottom: 3px;
+}
+.latest_videos_div {
+    border: 1px solid gray;
+    margin-top: 20px;
+    padding-bottom: 32px;
+}
+.latest_videos_div a p {
+    margin-left: 5px;
+}
+.latest_videos a {
+    text-decoration: none;
+}
+/* end they're here */
+/* Current Hit */
+
+.current_hit_heading {
+    margin-left: 22px;
+    margin-top: 35px;
+    color: rgb(62, 62, 119);
+}
+.current_hit {
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 35px;
+}
+.hit_img {
+    width: 100%;
+    height: 300px;
+}
+.hit_grid{
+    border: 1px solid gray;
+    padding-bottom: 20px;
+}
+.hit_grid h3 {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.hit_grid a {
+    text-decoration: none;
+}
+.hit_grid a:hover {
+    text-decoration: underline;
+}
+/* end current hit */
+/* Start (Election Hub & NY vs Trmp) */
+.election_hub {
+    margin-top: 25px;
+    margin-left: 22px;
+    margin-right: 22px;
+    border: 1px solid gray;
+} 
+.election_hub h2 {
+    color: rgb(62, 62, 119);
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.election_hub > a {
+    float: right;
+    color: rgb(62, 62, 119);
+    padding: 10px;
+    text-decoration: none;
+    padding-top: -3px;
+
+}
+.election_hub_div {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 10px;
+    margin-top: 20px;
+}
+.election_hub_div div {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.election_hub_img {
+    width: 100%;
+    height: 150px;
+    padding-bottom: 5px;
+}
+.election_hub_div div a {
+    text-decoration: none;
+    padding-right: 5px;
+}
+.election_hub_div div a:hover {
+    text-decoration: underline;
+}
+.election_hub_div div a h4 {
+    padding-top: 10px;
+}
+.election_hub_div div span {
+    opacity: 0.7;
+}
+/* End (Election Hub & NY vs Trmp) */
+/* Start all final news of politic page */
+.final_news_border {
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid gray;
+}
+.final_news_grid {
+    display: grid;
+    grid-template-columns: 35% auto;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.final_news_grid img{
+    width: 100%;
+}
+.final_news_text {
+    /* margin-top: px; */
+    margin-left: 30px;
+}
+
+.final_news_text a {
+    text-decoration: none;
+    padding-top: 10px;
+    
+}
+.final_news_text a:hover {
+    text-decoration: underline;
+}
+.final_news_text p {
+    padding-bottom: 8px;
+    padding-top: 5px;
+    color: rgb(62, 62, 119);
+}
+.final_news_text span {
+    padding-bottom: 20px;
+    opacity: 0.7;
+}
+.final_news_text h2 {
+    padding-top: 10px;
+}
+.final_news_grid {
+    padding-bottom: 20px;
+}
+.divided {
+    width: 96%;
+    margin-left: 20px;
+}
+/* End all final news of politic page */
+/* Start Footer */
+.footer {
+    background-color: rgb(64, 64, 171);
+    margin-top: 25px;
+}
+.footer1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding-bottom: 30px;
+}
+.footer1 div {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.footer div a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+.footer div a:hover {
+    text-decoration: underline;
+}
+.footer div a h2 {
+    padding-bottom: 10px;
+}
+.footer_logo {
+    margin-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.footer_logo ul li {
+    display: inline-block;
+}
+.footer_logo ul li a i {
+    padding: 20px;
+}
+.footer_logo p {
+    color: white;
+    padding-top: 7px;
+    padding-bottom: 15px;
+}
+/* End index(politic) page */
+
+/* Start wrold.html */
+/* Start world */
+.world {
+    margin-top: 22px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.world_news_headings {
+    display: grid;
+    grid-template-columns: 55% auto auto;
+    grid-column-gap: 15px;
+    padding-top: 15px;
+}
+.world_news_headings img {
+    width: 100%;
+}
+.world_news_headings div a {
+    text-decoration: none;
+}
+.world_news_headings div a:hover {
+    text-decoration: underline;
+}
+.world_news_headings div a h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.world_news_headings div a p {
+    padding: 15px;
+    font-size: 18px;
+}
+.world_news_headings div a iframe {
+    width: 100%;
+    height: 170px;
+}
+.world h1 {
+    color: rgb(62, 62, 119);
+}
+/* End world */
+/* Start Videos of World Page */
+.world_videos {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+.world_videos h1 {
+    color: rgb(62, 62, 119);
+    padding-bottom: 20px;
+}
+.world_video_grid {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-column-gap: 15px;
+}
+.world_video_grid iframe {
+    width: 100%;
+    height: 170px;
+}
+.world_video_grid a {
+    text-decoration: none;
+}
+.world_video_grid a:hover {
+    text-decoration: underline;
+}
+.world_video_grid a p {
+    padding-top: 10px;
+    font-size: 18px;
+}
+/* End Videos of World Page */
+
+
+
+
+
+
+
+/* Start contact */
+.contact {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.contact_grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 30px;
+}
+.contact_grid input {
+    width: 98%;
+    height: 40px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.contact_grid h3 {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    color: rgb(62, 62, 119);
+}
+.message {
+    margin-top: 30px;
+}
+.message h3 {
+    padding-bottom: 20px;
+    color: rgb(62, 62, 119);
+}
+.message textarea {
+    width: 1210px;
+    height: 250px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.message button {
+    margin-top: 15px;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: rgb(62, 62, 119);
+}
+.message button:hover {
+    background-color: rgb(62, 62, 119);
+    color: white;
+}
+.contact h1 {
+    color: rgb(62, 62, 119);
+}
