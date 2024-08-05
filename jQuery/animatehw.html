@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel {
+            max-width: 150px;
+            padding: 50px 0;
+            background-color: red;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="panel">Animation</p>
+    <button id="start-btn">Start</button>
+    <button id="stop-btn">Stop</button>
+
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#start-btn').click(function(){
+                $('#panel').animate({left: '550px'}, 3000); // animate(css, speed)
+                $('#panel').animate({top: '300px'}, 3000);
+                $('#panel').animate({left: '-=550px'}, 3000);
+                $('#panel').animate({top: '-=300px'}, 3000);
+            })
+            
+            $('#stop-btn').click(function(){
+                $('#panel').stop();
+            })
+        })
+    </script>
+</body>
+</html>

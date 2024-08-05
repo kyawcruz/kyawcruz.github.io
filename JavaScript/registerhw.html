@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register HomeWork</title>
+</head>
+<body>
+    <h1>Type Your Daily Cost</h1>
+    <form action="" name="myForm">
+        <Label>Date</Label>
+        <input type="date" name="date" id="date"><br><br>
+        <label>Name</label>
+        <input type="text" name="name" id="name"> <br><br>
+        <label for="">Price</label>
+        <input type="number" name="price" id="price">
+        <br><br>
+        <button type="button" onclick="showData()">Add</button>
+    </form>
+    <h1>Your Daily Cost</h1>
+    <table border="1" cellpadding="35" cellspacing="1" >
+        <thead>
+                <th col>Date</th>
+                <th>Food</th>
+                <th>Price</th>
+        </thead>
+        <tbody id="myBody">
+
+        </tbody>
+    </table>
+
+    <script>
+        var expenseArray = [];
+        function showData() {
+            let date = document.myForm.date.value;
+            let name = document.myForm.name.value;
+            let price = document.myForm.price.value;
+            
+            // console.log(date,name,price);
+
+            // create an object to add value
+
+            let dailyUse = {
+                spent_date : date,
+                spent_name : name,
+                spent_price : price
+            }
+            // console.log(dailyUse);
+
+            // array push data
+            expenseArray.push(dailyUse);
+            // console.log(expenseArray);
+            getData();
+        }
+        function getData() {
+            let html = ``
+            for (i = 0; i < expenseArray.length; i++) {
+                let expenseObj = expenseArray[i];
+                total = expenseObj.spent_price[2];
+                console.log(total);
+
+                html += `<tr>
+                            <td>${expenseObj.spent_date}</td>
+                            <td>${expenseObj.spent_name}</td>
+                            <td>${expenseObj.spent_price}</td>
+                        </tr>
+                        <tr>
+                            <td colspan= "2"> Total</td>
+                            <td>${expenseObj.spent_price}</td>
+                        </tr>`
+            }
+            document.getElementById('myBody').innerHTML = html;
+        }
+
+    </script>
+</body>
+</html>

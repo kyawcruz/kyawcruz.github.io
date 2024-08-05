@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="border: 1px solid gray;">
+    <h1 style="text-align: center; color: red;">jQuery Selector</h1>
+    <button id="click">Click</button>
+
+    <p style="text-align: center;" class="jq">jQuery is Funny.</p>
+    <p style="text-align: center;" class="jq">jQuery is Easy.</p>
+    <p style="text-align: center;" class="jq">jQuery is Lightweight.</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#click').click(function(){
+                alert('You clicked the click button.');
+            })
+            $('#hide').click(function(){
+                $('.jq').hide();
+            })
+            $('#show').click(function(){
+                $('.jq').show();
+            })
+        })
+    </script>
+</body>
+</html>

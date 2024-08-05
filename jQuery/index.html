@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- jQuery linking -->
+    <script src="jquery-3.7.1.min.js"></script>    
+
+    <script>
+        // jQuery('css_selector').action(callback function)
+        // $('css_selector').action(callback)
+
+        // nameless function
+        
+        let funName = function () {
+            return "hello";
+        }
+        document.write(funName());
+        // console.log(funName());
+
+        $(document).ready(function(){
+            alert("Hello jQuery"); 
+        })
+    </script>
+</body>
+</html>

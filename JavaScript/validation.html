@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Your Login</h1>
+    <form action="home.php" method="post" onsubmit="return checkCValidation()">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <p id="emailErrorMessage"></p>
+        <label for="password">Passowrd</label>
+        <input type="password" name="password" id="password">
+        <p id="passwordErrorMessage"></p>
+
+        <button type="submit">Login</button>
+        <!-- <button type="submit" onclick="return checkCValidation()">Login</button> -->
+    </form>
+    
+    <script>
+        function checkCValidation() {
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+
+            if (email == "" && password == "") {
+                let emailError = document.getElementById('email');
+                let emailErrorMessage = document.getElementById('emailErrorMessage');
+                emailError.style.border = "1px solid red";
+                emailErrorMessage.innerHTML = "Please Fill Your Email";
+                emailErrorMessage.style.color = "red";
+                emailErrorMessage.style.margin = "0px";
+
+                let passwordError = document.getElementById('password');
+                let passwordErrorMessage = document.getElementById('passwordErrorMessage');
+                passwordError.style.border = "1px solid red";
+                passwordErrorMessage.innerHTML = "Please Fill Your Password";
+                passwordErrorMessage.style.color = "red";
+                passwordErrorMessage.style.margin = "0px";
+                return false;
+            } else {
+                return true;
+            }
+             
+        }
+    </script>
+</body>
+</html>

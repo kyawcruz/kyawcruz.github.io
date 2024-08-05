@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Today is <i>Thursday.</i>We learn everything. When we <i>Start</i> do something we get <i>Win</i> or <i>learn</i></h3>
+
+    Name: <input type="text" id="name">
+    <h4 id="showName"></h4>
+    <h4 id="content1"></h4>
+    <h4 id="content2"></h4>
+    <h4 id="content3"></h4>
+
+    <button id="click">Click</button>
+
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#click').click(function(){
+                
+                let get_text = $('h3').text();
+                console.log(get_text);
+                let get_html = $('h3').html();
+                console.log(get_html);
+                let get_name = $('#name').val();
+                console.log(get_name);
+
+                // set data
+                $('#showName').text(get_name);
+                $('#content1').text(get_text);
+                $('#content2').html(get_html);
+                $('#content3').text(get_html);
+            })
+        })
+    </script>
+    
+</body>
+</html>
