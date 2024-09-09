@@ -1,0 +1,20 @@
+/* Start navigation */
+.navlogo {
+    width: 120px;
+    height: 100px;
+}
+.navboxshadow {
+    box-shadow: 0px 30px 30px rgba(95, 56, 56, 0.4);
+}
+/* End navigation */
+
+/* Start Hero */
+
+.hero_img {
+    width: 100%;
+    height: 600px;
+}
+/* end hero */
+/* Start overview */
+
+/* Start about page Our Team */

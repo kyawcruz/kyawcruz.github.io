@@ -1,0 +1,28 @@
+.carousel_text {
+    top: 35%;
+    left: 10%;
+}
+/* Category */
+.card_hover:hover {
+    /* background-color: #f34b4b; */
+    color: white;
+    box-shadow: -2px 3px 10px 0px rgba(224,87,87,1);
+}
+/* course */
+.course_img_hover:hover {
+    transform: scale(1.2);
+    transition-duration: .7s;
+}
+.course_img_hidden{
+    overflow: hidden;
+}
+/* about */
+.border_danger {
+    border-left: 10px solid red;
+}
+
+.about_divided {
+    border: 5px solid red;
+    width: 100px;
+}
+/* plugin for our team */

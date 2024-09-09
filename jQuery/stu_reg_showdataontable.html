@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="add_student">
+        <h1>Student Registration</h1>
+        Name: <input type="text" name="name" id="name"><br><br>
+        Email: <input type="email" name="email" id="email"><br><br>
+        Phone: <input type="phone" name="phone" id="phone"><br><br>
+        Year: <select name="year" id="year">
+                    <option value="">Choose Year</option>
+                    <option value="first">First Year</option>
+                    <option value="second">Second Year</option>
+                    <option value="third">Third Year</option>
+            </select>
+            <br><br>
+            <button type="button" id="add">Add</button>
+            <br><br>
+    </div> <br>
+
+    <div id="edit_student">
+        <h1>Update Student Registration</h1>
+        <input type="hidden" name="" id="edit-key">
+        Name: <input type="text" name="name" id="edit-name"><br><br>
+        Email: <input type="email" name="email" id="edit-email"><br><br>
+        Phone: <input type="phone" name="phone" id="edit-phone"><br><br>
+        Year: <select name="year" id="edit-year">
+                    <option value="">Choose Year</option>
+                    <option value="first">First Year</option>
+                    <option value="second">Second Year</option>
+                    <option value="third">Third Year</option>
+            </select>
+            <br><br>
+            <button type="button" id="update">Update</button>
+            <br><br>
+    </div>
+
+    <table border="1" cellspacing="0" cellpadding="25">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Year</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#edit_student").hide();
+
+            getData();
+            function getData(){
+
+                let getStuString = localStorage.getItem('students');
+
+                if (getStuString) {
+                    showStuArray = JSON.parse(getStuString);
+                    console.log(showStuArray); 
+
+                    // $.each(array,function(key,value){ })
+                    let data = '';
+                    let j = 1;
+                    $.each(showStuArray,function(i,v){
+                        // console.log("This is key"+i);
+                        // console.log(v.stu_name);
+
+                        data += `<tr>
+                                    <td>${j++}</td>
+                                    <td>${v.stu_name}</td>
+                                    <td>${v.stu_email}</td>
+                                    <td>${v.stu_phone}</td>
+                                    <td>${v.stu_year}</td>
+                                    <td>
+                                        <button class="edit" data-key="${i}" data-name="${v.stu_name}" data-email="${v.stu_email}" data-phone="${v.stu_phone}" data-year="${v.stu_year}">Edit</button>
+                                        <button class="delete" data-key="${i}">Delete</button>
+                                    </td
+                            </tr>`
+                    })
+                    $('#tbody').html(data);
+                }
+
+            }
+    
+            $('#add').click(function(){
+                let name = $('#name').val();
+                let email = $('#email').val();
+                let phone = $('#phone').val();
+                let year = $('#year').val();
+
+                console.log(name,email,phone,year);
+
+                let students = {
+                    stu_name : name,
+                    stu_email : email,
+                    stu_phone : phone,
+                    stu_year : year
+                }
+                console.log(students);
+
+                // CRUD
+                // C - Create
+                // R - Read
+                // U - Update
+                // D - Delete
+
+                let stuString = localStorage.getItem('students'); // get localstorage data
+                let stuArray = [];
+                if (stuString == null ) {
+                    stuArray = [];
+                } else {
+                    stuArray = JSON.parse(stuString); // json string to json array
+                }
+                console.log(stuArray);
+
+                stuArray.push(students);
+                console.log(stuArray);
+
+                let studentData = JSON.stringify(stuArray); // json array to json string
+                // console.log(studentData);
+                
+                localStorage.setItem('students', studentData); // set data to localstorage or create
+
+                getData();
+                
+            })
+
+            $('#tbody').on('click','.delete',function(){
+                let key = $(this).data('key');
+                alert(key);
+                let ans = confirm("Are you sure to Delete");
+                alert(ans);
+
+                if(ans) {
+                    let getStuString = localStorage.getItem('students');
+                    if(getStuString){
+                        let stuArry = JSON.parse(getStuString);
+                        console.log(stuArry);
+                        stuArry.splice(key,1); // splice(index number-အခန်းနံပါတ်,ဖျက်မည့်အခန်းအရေအတွက်)
+                        console.log(stuArry); // delete in the localstorage
+
+                        let studentData = JSON.stringify(stuArry); // convert the array to string after deletion
+                        localStorage.setItem('students',studentData); // studentdata=new object, add studentData to students in local storage
+                        getData(); // call function to show live data after deletion
+
+
+                    }
+                }
+            })
+
+            $('#tbody').on('click','.edit',function(){
+                let key = $(this).data('key');
+                let name = $(this).data('name');
+                let email = $(this).data('email');
+                let phone = $(this).data('phone');
+                let year = $(this).data('year');
+
+                console.log(key,name,email,phone,year);
+                // alert(key);
+                $("#add_student").hide();
+                $("#edit_student").show();
+
+                $('#edit-key').val(key);
+                $('#edit-name').val(name);
+                $('#edit-email').val(email);
+                $('#edit-phone').val(phone);
+                $('#edit-year').val(year);
+            })
+
+            $('#update').click(function(){
+                let key = $('#edit-key').val();
+                let name = $('#edit-name').val();
+                let email = $('#edit-email').val();
+                let phone = $('#edit-phone').val();
+                let year = $('#edit-year').val();
+                console.log(key,name,email,phone,year);
+
+                let stuString = localStorage.getItem('students');
+                if (stuString) {
+                    let stuArray = JSON.parse(stuString);
+                    console.log(stuArray[key]);
+                    
+                    stuArray[key].stu_name = name;
+                    stuArray[key].stu_email = email;
+                    stuArray[key].stu_phone = phone;
+                    stuArray[key].stu_year = year;
+                    console.log(stuArray[key]);
+
+                    let studentData = JSON.stringify(stuArray);
+                    localStorage.setItem('students',studentData);
+
+                    getData();
+
+                    $('#edit_student').hide();
+                    $('#add_student').show();
+                }
+            })
+        })
+    </script>
+</body>
+</html>

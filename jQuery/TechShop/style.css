@@ -1,0 +1,17 @@
+
+.nav {
+    box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.5);
+}
+.nav ul {
+    float: right;
+}
+.nav li {
+    display: inline-block;
+    margin-top: ;
+}
+.nav ul li a {
+    text-decoration: none;
+}
+.itshop {
+    margin-right: 1080px;
+}

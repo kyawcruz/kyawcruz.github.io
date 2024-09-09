@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name: <input type="text" name="name" id="name"><br><br>
+    Email: <input type="email" name="email" id="email"><br><br>
+    Phone: <input type="phone" name="phone" id="phone"><br><br>
+    <button type="button" id="add">Add</button>
+    <br><br>
+    
+    <table border="1" cellpadding="25" cellspacing="0">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let html = ``;
+            let i = 1;
+
+            $('#add').click(function(){
+                let name = $('#name').val();
+                let email = $('#email').val();
+                let phone = $('#phone').val();
+
+                console.log(name, email, phone);
+
+                html += `<tr>
+                            <td>${i++}</td>
+                            <td>${name}</td>
+                            <td>${email}</td>
+                            <td>${phone}</td>
+                        </tr>`;
+
+                $('#tbody').html(html);
+            })
+        })
+    </script>
+</body>
+</html>
